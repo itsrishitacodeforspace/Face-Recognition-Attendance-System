@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-grad: radial-gradient(circle at top left, #cbe1ff 0%, #f2f5f7 45%, #f8ead8 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background: var(--bg-grad);
+  color: #14222f;
+}
+
+.card {
+  @apply rounded-2xl bg-white/80 backdrop-blur-md shadow-punch p-5;
+}
+
+.grid-auto {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}

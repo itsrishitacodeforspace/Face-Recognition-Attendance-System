@@ -1,0 +1,427 @@
+# ============================================================================
+# SECURITY: Sensitive & Credential Files (NEVER ADD TO GIT)
+# ============================================================================
+
+# Environment files (CRITICAL - contains secrets and API keys)
+.env
+.env.local
+.env.*.local
+.env.prod
+.env.production
+backend/.env
+backend/.env.local
+backend/.env.*.local
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# Credentials and private keys
+*.key
+*.pem
+*.cer
+*.crt
+*.p12
+*.p8
+*.pfx
+*.jks
+*.keystore
+*.pks
+id_rsa
+id_dsa
+*.ppk
+.ssh/
+secrets/
+.secrets/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Repository-local scratch files
+allfiles.txt
+
+# ============================================================================
+# PYTHON BACKEND
+# ============================================================================
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+**/.venv/
+**/venv/
+backend/.venv/
+backend/venv/
+
+# Python compiled files and caches
+__pycache__/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Python cache directories
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# Python packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================================
+# DATABASE & DATA FILES
+# ============================================================================
+
+# SQLite databases (local development only)
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+*.db
+*.sqlite
+*.sqlite3
+
+# Large ML model files and embeddings (contains trained data)
+backend/data/
+data/uploads/
+data/models/
+backend/data/uploads/
+backend/data/models/
+backend/data/models/*.bin
+backend/data/models/*.json
+backend/data/models/*.pt
+backend/data/models/*.pth
+backend/data/models/*.onnx
+
+# FAISS indexes and embeddings
+*.bin
+*.index
+*.faiss
+embeddings_cache.json
+faiss_index.bin
+
+# ============================================================================
+# DEEP LEARNING — MODEL WEIGHTS & CHECKPOINTS
+# ============================================================================
+
+# PyTorch
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+lightning_logs/
+
+# TensorFlow / Keras
+*.h5
+*.hdf5
+*.keras
+*.pb
+saved_model/
+tf_model/
+
+# ONNX
+*.onnx
+
+# Pickle / joblib serialised models
+*.pkl
+*.pickle
+*.joblib
+
+# InsightFace downloaded model packs
+~/.insightface/
+.insightface/
+
+# General model directories
+models/
+weights/
+pretrained/
+model_zoo/
+
+# ============================================================================
+# DEEP LEARNING — DATASETS
+# ============================================================================
+
+# Dataset root folders (never commit raw training data)
+datasets/
+dataset/
+data/raw/
+data/processed/
+LFW/
+lfw/
+CelebA/
+VGGFace*/
+MS1MV*/
+
+# Common image archive formats used in datasets
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.tif
+# Un-ignore example/demo images if placed in docs/
+!docs/**/*.jpg
+!docs/**/*.png
+
+# ============================================================================
+# JUPYTER NOTEBOOKS — OUTPUT CELLS
+# ============================================================================
+
+# Notebook checkpoints (auto-saved by Jupyter)
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Strip output cells before committing (use nbstripout):
+# pip install nbstripout && nbstripout --install
+# NOTE: .ipynb files themselves are allowed, but outputs should be cleared.
+
+# ============================================================================
+# ML EXPERIMENT TRACKING
+# ============================================================================
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Weights & Biases
+wandb/
+
+# TensorBoard logs
+runs/
+tb_logs/
+tensorboard_logs/
+events.out.tfevents.*
+
+# Optuna study databases
+optuna_study.db
+*.optuna
+
+# ============================================================================
+# NODE / FRONTEND
+# ============================================================================
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.next/
+frontend/.nuxt/
+frontend/out/
+frontend/build/
+
+# Environment files
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# ============================================================================
+# LOGGING & TEMPORARY FILES
+# ============================================================================
+
+# Logs
+*.log
+*.logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary files
+*.tmp
+.tmp/
+*.temp
+.cache/
+.temp/
+
+# OS temporary files
+*.bak
+*.backup
+*.orig
+~*
+
+# ============================================================================
+# DOCKER & DEPLOYMENT
+# ============================================================================
+
+# Docker compose overrides (local-specific)
+docker-compose.override.yml
+docker-compose.local.yml
+.dockerignore.local
+
+# Docker builds and caches
+.docker/
+docker-build-context/
+
+# Kubernetes/container orchestration secrets
+k8s-secrets.yaml
+secrets.yaml
+secrets.yml
+.kubeconfig
+*.kubeconfig
+
+# ============================================================================
+# IDE & EDITOR SPECIFIC
+# ============================================================================
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+**/!.vscode/*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+*.idea/
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+.vim/
+*.vim
+.netrwhist
+
+# Emacs
+*~
+.#*
+\#*\#
+.\#*
+
+# Other editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-settings
+
+# ============================================================================
+# SYSTEM SPECIFIC
+# ============================================================================
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.TemporaryItems
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.ndesk-dbus*
+*~
+
+# ============================================================================
+# NPM & YARN SPECIFIC
+# ============================================================================
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock.backup
+package-lock.json.backup
+
+# Local npm modules
+.npm/
+npm-cache/
+.yarn/cache/
+.yarn/install-state.gz
+
+# ============================================================================
+# PYTHON SPECIFIC
+# ============================================================================
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+.pip-cache/
+.pipcache/
+
+# Poetry
+poetry.lock.backup
+pyproject.toml.backup
+
+# Pipenv
+Pipfile.lock
+
+# ============================================================================
+# RUNTIME & APPLICATION STATE
+# ============================================================================
+
+# Large video/media files (uploads)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+videos/
+uploads/
+backend/uploads/
+
+# Process files
+*.pid
+.run/
+
+# vllm environment
+vllm-env/
+
+# ============================================================================
+# MISC
+# ============================================================================
+
+# Compressed archives (avoid storing large files)
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# IDE workspace settings with secrets
+# ============================================================================
+# END .gitignore
+# ============================================================================
+
